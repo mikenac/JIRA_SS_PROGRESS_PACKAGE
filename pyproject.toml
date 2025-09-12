@@ -1,0 +1,36 @@
+[build-system]
+    requires = ["hatchling>=1.25.0"]
+    build-backend = "hatchling.build"
+
+    [project]
+    name = "jira-ss-progress"
+    version = "0.1.0"
+    description = "Sync Jira progress from Jira Cloud into a Smartsheet Percent column."
+    readme = "README.md"
+    requires-python = ">=3.10"
+    license = { text = "MIT" }
+    authors = [{ name = "Your Team", email = "you@example.com" }]
+    keywords = ["jira", "smartsheet", "progress", "sync"]
+    classifiers = [
+      "Programming Language :: Python :: 3",
+      "License :: OSI Approved :: MIT License",
+      "Environment :: Console",
+      "Topic :: Office/Business",
+    ]
+    dependencies = [
+      "jira>=3.6.0",
+      "smartsheet-python-sdk>=3.0.2",
+      "python-dotenv>=1.0.1",
+    ]
+
+    [project.scripts]
+    jira-ss-sync = "jira_ss_progress.cli:main"
+
+    [tool.ruff]
+    line-length = 100
+    target-version = "py310"
+    select = ["E", "F", "I", "UP"]
+    exclude = ["**/.venv/**", "**/__pycache__/**"]
+
+    [tool.ruff.lint]
+    # (ruff 0.4+ uses 'lint' table; keep minimal to avoid version drift)
