@@ -205,14 +205,20 @@ def run_sync(cfg: Config) -> SyncResult:
                 # Smartsheet percent column expects 0..1 floats
                 new_val = round(final_pct / 100.0, 6)
                 if existing is None or abs((existing or 0.0) - new_val) > 0.000001:
-                    cells.append(Cell(column_id=prog_col, value=new_val))
+                    c = Cell()
+                    c.column_id = prog_col
+                    c.value = new_val
+                    cells.append(c)
                     row_update_needed = True
 
             # Status cell — do not overwrite "Blocked"
             if status_col is not None and final_status is not None:
                 if not (existing_status and existing_status.strip().lower() == "blocked"):
                     if existing_status != final_status:
-                        cells.append(Cell(column_id=status_col, value=final_status))
+                        c = Cell()
+                        c.column_id = status_col
+                        c.value = final_status
+                        cells.append(c)
                         row_update_needed = True
                 else:
                     log.debug("Preserving existing 'Blocked' status for %s; skipping status update.", key)
@@ -221,16 +227,25 @@ def run_sync(cfg: Config) -> SyncResult:
             if start_col is not None:
                 if start_new is not None or (not cfg.protect_existing_dates):
                     if start_old != start_new:
-                        cells.append(Cell(column_id=start_col, value=start_new))
+                        c = Cell()
+                        c.column_id = start_col
+                        c.value = start_new
+                        cells.append(c)
                         row_update_needed = True
             if end_col is not None:
                 if end_new is not None or (not cfg.protect_existing_dates):
                     if end_old != end_new:
-                        cells.append(Cell(column_id=end_col, value=end_new))
+                        c = Cell()
+                        c.column_id = end_col
+                        c.value = end_new
+                        cells.append(c)
                         row_update_needed = True
 
             if row_update_needed:
-                updates.append(Row(id=rid, cells=cells))
+                r = Row()
+                r.id = rid
+                r.cells = cells
+                updates.append(r)
 
     if updates and not cfg.dry_run:
         for batch in SU.chunk(updates, 400):
