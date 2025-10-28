@@ -2,7 +2,7 @@
 Smartsheet helpers: client connection, column utilities, and cell parsing.
 """
 from __future__ import annotations
-from typing import Optional, Iterable, Iterator, Tuple
+from typing import Optional, Iterable, Iterator
 import logging
 import re
 
@@ -62,6 +62,47 @@ def parse_percent_cell(cell) -> Optional[float]:
             return None
     return None
 
+def text_cell_value(cell) -> Optional[str]:
+    """Return a cell's text value (value or display_value) if any."""
+    if cell is None:
+        return None
+    v = getattr(cell, "value", None)
+    if isinstance(v, str) and v.strip():
+        return v
+    dv = getattr(cell, "display_value", None)
+    if isinstance(dv, str) and dv.strip():
+        return dv
+    return None
+
+def date_cell_iso(cell) -> Optional[str]:
+    """
+    Return a date-like cell as ISO 'YYYY-MM-DD' string for Jira.
+    Prefers the underlying value (Smartsheet yields ISO-8601) and strips any time.
+    """
+    if cell is None:
+        return None
+    v = getattr(cell, "value", None)
+    if isinstance(v, str) and v:
+        s = v.strip()
+        if "T" in s:
+            s = s.split("T", 1)[0]
+        if len(s) == 10 and s[4] == "-" and s[7] == "-":
+            return s
+        return s  # attempt anyway
+    dv = getattr(cell, "display_value", None)
+    if isinstance(dv, str) and dv.strip():
+        s = dv.strip()
+        if "/" in s and len(s) in (8, 9, 10):
+            parts = s.split("/")
+            if len(parts) == 3:
+                mm, dd, yy = parts
+                if len(yy) == 2:
+                    yy = ("20" + yy) if int(yy) < 70 else ("19" + yy)
+                return f"{yy.zfill(4)}-{mm.zfill(2)}-{dd.zfill(2)}"
+        if "-" in s and len(s) >= 10:
+            return s[:10]
+    return None
+
 def chunk(it: Iterable, n: int) -> Iterator[list]:
     """Yield fixed-size batches from an iterable (last batch may be smaller)."""
     buf = []
@@ -69,5 +110,5 @@ def chunk(it: Iterable, n: int) -> Iterator[list]:
         buf.append(x)
         if len(buf) == n:
             yield buf; buf = []
-    if buf: 
+    if buf:
         yield buf
