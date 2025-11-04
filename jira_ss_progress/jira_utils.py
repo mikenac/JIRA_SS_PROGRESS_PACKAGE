@@ -98,12 +98,20 @@ def search_all(jira: JIRA, jql: str, fields: List[str]) -> List:
 
 def epic_children(jira: JIRA, epic_key: str, fields: List[str]) -> List:
     """Children for an epic: prefer parentEpic, fallback to 'Epic Link'."""
+    fields = list(set(fields + ["issuetype"]))
+    
     for jql in (
-        f'parentEpic = "{epic_key}" AND issuetype in standardIssueTypes()',
-        f'"Epic Link" = "{epic_key}" AND issuetype in standardIssueTypes()',
+        f'parentEpic = "{epic_key}" AND issuetype in (Story, Task, Sub-task)',
+        f'"Epic Link" = "{epic_key}" AND issuetype in (Story, Task, Sub-task)',
     ):
         issues = search_all(jira, jql, fields)
         if issues:
+            # Log summary of what we found without specific issue keys
+            type_counts = {}
+            for i in issues:
+                type_name = i.fields.issuetype.name
+                type_counts[type_name] = type_counts.get(type_name, 0) + 1
+            log.debug("Epic has %d children: %s", len(issues), dict(type_counts))
             return issues
     return []
 
@@ -143,13 +151,34 @@ def get_story_points(issue, sp_ids: List[str]) -> Optional[float]:
 def epic_progress_details(jira: JIRA, epic_key: str, sp_ids: List[str]) -> Tuple[Optional[float], Dict]:
     """
     Compute epic progress and return (progress_fraction, details).
-    'details' includes metric ('points' or 'count') and totals for diagnostics, plus
-    category counts: todo_cnt, inprog_cnt, done_cnt.
+    First checks if epic itself is Done; if so returns 1.0 without checking children.
+    Otherwise computes progress based on children's story points or counts.
     """
+    # First check if the epic itself is Done
+    epic = jira.issue(epic_key, fields="status,statusCategory")
+    epic_status_key = status_category_key(epic)
+    
+    details = {
+        "metric": "count",
+        "total_sp": 0.0,
+        "done_sp": 0.0,
+        "total_cnt": 0,
+        "done_cnt": 0,
+        "todo_cnt": 0,
+        "inprog_cnt": 0,
+        "status": _label_from_cat(epic_status_key),
+        "status_category": epic_status_key,
+        "raw_status": epic.fields.status.name
+    }
+
+    # If epic is Done, return 100% without checking children
+    if epic_status_key == "done":
+        details.update({"status_category": epic_status_key})
+        return 1.0, details
+
+    # Otherwise proceed with child calculation
     fields = ["status"] + sp_ids
     children = epic_children(jira, epic_key, fields)
-    details = {"metric": "count", "total_sp": 0.0, "done_sp": 0.0,
-               "total_cnt": 0, "done_cnt": 0, "todo_cnt": 0, "inprog_cnt": 0}
     if not children:
         return None, details
 
@@ -183,31 +212,46 @@ def epic_progress_details(jira: JIRA, epic_key: str, sp_ids: List[str]) -> Tuple
     details.update({"total_sp": total_sp, "done_sp": done_sp})
     return (max(0.0, min(1.0, done / total_cnt)) if total_cnt else None), details
 
-def story_progress_details(jira: JIRA, issue_key: str, include_subtasks: bool=False) -> Tuple[float, Dict]:
-    """
-    Non-epic progress:
-      - Default: binary → Done = 1.0 else 0.0
-      - If include_subtasks=True: fraction from subtasks (done/total)
-    Returns details with 'metric','completed','total','status_cat'.
-    """
-    fields = "status,subtasks" if include_subtasks else "status"
-    issue = jira.issue(issue_key, fields=fields)
-    status_cat = status_category_key(issue)
+def story_progress_details(jira: JIRA, key: str, include_subtasks: bool = False) -> Tuple[float, dict]:
+    """Get progress details for a Story/Task/Bug."""
+    issue = jira.issue(key, fields="status,statusCategory,subtasks")
+    
+    # Get status details
+    status_name = issue.fields.status.name
+    cat_key = getattr(issue.fields.status.statusCategory, 'key', None)
+    
+    details = {
+        "metric": "story",
+        "raw_status": status_name,
+        "status_category": cat_key,
+        "status": _label_from_cat(cat_key)
+    }
 
-    if not include_subtasks:
-        prog = 1.0 if status_cat == "done" else 0.0
-        return prog, {"metric":"story","completed": 1 if prog==1.0 else 0, "total":1, "status_cat": status_cat}
+    # If Done category, it's 100%
+    if cat_key and cat_key.lower() == "done":
+        return 1.0, details
+    
+    # Not done, check subtasks if requested
+    if include_subtasks:
+        subs = getattr(issue.fields, "subtasks", []) or []
+        if subs:  # if there are subtasks, calculate based on them
+            done = sum(1 for s in subs if status_category_key(jira.issue(s.key, fields="status")) == "done")
+            total = len(subs)
+            prog = done / total if total > 0 else 0.0
+            details.update({"metric": "subtasks", "completed": done, "total": total})
+            return prog, details
+    
+    return 0.0, details
 
-    subs = getattr(issue.fields, "subtasks", []) or []
-    if not subs:  # no subtasks → fallback to binary
-        prog = 1.0 if status_cat == "done" else 0.0
-        return prog, {"metric":"story","completed": 1 if prog==1.0 else 0, "total":1, "status_cat": status_cat}
-
-    done = 0
-    for s in subs:
-        si = jira.issue(s.key, fields="status")
-        if status_category_key(si) == "done":
-            done += 1
-    total = len(subs)
-    prog = done/total if total else (1.0 if status_cat == "done" else 0.0)
-    return prog, {"metric":"subtasks","completed":done,"total":total, "status_cat": status_cat}
+def _label_from_cat(cat_key) -> str:
+    """Convert a Jira status category key to a human-readable label."""
+    if not cat_key:
+        return "Unknown"
+    key = cat_key.lower()
+    if key == "new":
+        return "Not Started"
+    if key == "indeterminate":
+        return "In Progress"
+    if key == "done":
+        return "Complete"  # Changed from "Done" to match Smartsheet
+    return key  # Fallback to the raw key if no match

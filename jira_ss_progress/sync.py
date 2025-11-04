@@ -125,7 +125,7 @@ def run_sync(cfg: Config) -> SyncResult:
             except JIRAError as e:
                 status = getattr(e, "status_code", None)
                 if status == 404:
-                    log.warning("Jira issue %s not found (404). It may have been deleted; skipping.", key)
+                    log.warning("Issue %s not found (404). It may have been deleted; skipping.", key)
                     continue
                 raise
 
@@ -140,7 +140,8 @@ def run_sync(cfg: Config) -> SyncResult:
             metric = details.get("metric", "count")
             total = details.get("total", 0)
             new_pct = (completed / total * 100) if total else 0.0
-            new_status = details.get("status")  # expected to be like 'Complete'/'In Progress'/'Not Started'
+            new_status = details.get("status")
+
         else:
             completed, details = JU.story_progress_details(jira, key, include_subtasks=cfg.include_subtasks)
             metric = details.get("metric", "story")
