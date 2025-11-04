@@ -163,15 +163,20 @@ def run_sync(cfg: Config) -> SyncResult:
         end_new = end_iso
 
         # Status handling: preserve special manual statuses like "Blocked"
-        #  - If the sheet already shows "Blocked", don't remove it.
-        #  - If protection prevents a downgrade to "Not Started", keep existing_status.
+        #  - If the sheet already shows "Blocked", don't remove it
+        #  - If protection prevents a downgrade to "Not Started", keep existing_status
+        #  - If progress is 100%, always set status to "Complete"
         final_status = new_status
         if existing_status:
-            if (existing_status.strip().lower() == "blocked"):
+            if existing_status.strip().lower() == "blocked":
                 final_status = existing_status  # always preserve Blocked
             elif cfg.protect_existing_nonzero and protected and (new_status == "Not Started"):
                 # avoid downgrading to Not Started when progress protection kept a non-zero %
                 final_status = existing_status
+        
+        # Force Complete status if progress is 100%
+        if final_pct == 100.0:
+            final_status = "Complete"
 
         # Build preview row
         preview.append(PreviewRow(
