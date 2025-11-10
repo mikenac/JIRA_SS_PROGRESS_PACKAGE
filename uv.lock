@@ -76,6 +76,119 @@ wheels = [
 ]
 
 [[package]]
+name = "colorama"
+version = "0.4.6"
+source = { registry = "https://repo.teledev.io/repository/pypi-all/simple" }
+sdist = { url = "https://repo.teledev.io/repository/pypi-all/packages/colorama/0.4.6/colorama-0.4.6.tar.gz", hash = "sha256:08695f5cb7ed6e0531a20572697297273c47b8cae5a63ffc6d6ed5c201be6e44" }
+wheels = [
+    { url = "https://repo.teledev.io/repository/pypi-all/packages/colorama/0.4.6/colorama-0.4.6-py2.py3-none-any.whl", hash = "sha256:4f1d9991f5acc0ca119f9d443620b77f9d6b33703e51011c16baf57afb285fc6" },
+]
+
+[[package]]
+name = "coverage"
+version = "7.11.2"
+source = { registry = "https://repo.teledev.io/repository/pypi-all/simple" }
+sdist = { url = "https://repo.teledev.io/repository/pypi-all/packages/coverage/7.11.2/coverage-7.11.2.tar.gz", hash = "sha256:ae43149b7732df15c3ca9879b310c48b71d08cd8a7ba77fda7f9108f78499e93" }
+wheels = [
+    { url = "https://repo.teledev.io/repository/pypi-all/packages/coverage/7.11.2/coverage-7.11.2-cp310-cp310-macosx_10_9_x86_64.whl", hash = "sha256:004bdc5985b86f565772af627925e368256ee2172623db10a0d78a3b53f20ef1" },
+    { url = "https://repo.teledev.io/repository/pypi-all/packages/coverage/7.11.2/coverage-7.11.2-cp310-cp310-macosx_11_0_arm64.whl", hash = "sha256:3aa8c62460499e10ceac5ea61cc09c4f7ddcd8a68c6313cf08785ad353dfd311" },
+    { url = "https://repo.teledev.io/repository/pypi-all/packages/coverage/7.11.2/coverage-7.11.2-cp310-cp310-manylinux1_i686.manylinux_2_28_i686.manylinux_2_5_i686.whl", hash = "sha256:d73da4893125e0671f762e408dea9957b2bda0036c9589c2fd258a6b870acbdb" },
+    { url = "https://repo.teledev.io/repository/pypi-all/packages/coverage/7.11.2/coverage-7.11.2-cp310-cp310-manylinux1_x86_64.manylinux_2_28_x86_64.manylinux_2_5_x86_64.whl", hash = "sha256:805efa416085999da918f15f81b26636d8e79863e1fbac1495664686d1e6a6e9" },
+    { url = "https://repo.teledev.io/repository/pypi-all/packages/coverage/7.11.2/coverage-7.11.2-cp310-cp310-manylinux2014_aarch64.manylinux_2_17_aarch64.manylinux_2_28_aarch64.whl", hash = "sha256:c65f4291aec39692a3bfbe1d92ae5bea58c16b5553fdf021de61c655d987233f" },
+    { url = "https://repo.teledev.io/repository/pypi-all/packages/coverage/7.11.2/coverage-7.11.2-cp310-cp310-manylinux_2_31_riscv64.manylinux_2_39_riscv64.whl", hash = "sha256:b7658f3d4f728092368c091c18efcfb679be9b612c93bfdf345f33635a325188" },
+    { url = "https://repo.teledev.io/repository/pypi-all/packages/coverage/7.11.2/coverage-7.11.2-cp310-cp310-musllinux_1_2_aarch64.whl", hash = "sha256:9f5f6ee021b3b25e748a9a053f3a8dd61a62b6689efd6425cb47e27360994903" },
+    { url = "https://repo.teledev.io/repository/pypi-all/packages/coverage/7.11.2/coverage-7.11.2-cp310-cp310-musllinux_1_2_i686.whl", hash = "sha256:9a95b7a6043b221ec1a0d4d5481e424272b37028353265fbe5fcd3768d652eb7" },
+    { url = "https://repo.teledev.io/repository/pypi-all/packages/coverage/7.11.2/coverage-7.11.2-cp310-cp310-musllinux_1_2_riscv64.whl", hash = "sha256:94ced4a29a6987af99faaa49a513bf8d0458e8af004c54174e05dd7a8a31c7d9" },
+    { url = "https://repo.teledev.io/repository/pypi-all/packages/coverage/7.11.2/coverage-7.11.2-cp310-cp310-musllinux_1_2_x86_64.whl", hash = "sha256:8014a28a37ffabf7da7107f4f154d68c6b89672f27fef835a0574591c5cd140b" },
+    { url = "https://repo.teledev.io/repository/pypi-all/packages/coverage/7.11.2/coverage-7.11.2-cp310-cp310-win32.whl", hash = "sha256:43ecf9dca4fcb3baf8a886019dd5ce663c95a5e1c5172719c414f0ebd9eeb785" },
+    { url = "https://repo.teledev.io/repository/pypi-all/packages/coverage/7.11.2/coverage-7.11.2-cp310-cp310-win_amd64.whl", hash = "sha256:230317450af65a37c1fdbdd3546f7277e0c1c1b65e0d57409248e5dd0fa13493" },
+    { url = "https://repo.teledev.io/repository/pypi-all/packages/coverage/7.11.2/coverage-7.11.2-cp311-cp311-macosx_10_9_x86_64.whl", hash = "sha256:36c41bf2ee6f6062de8177e249fee17cd5c9662cd373f7a41e6468a34c5b9c0f" },
+    { url = "https://repo.teledev.io/repository/pypi-all/packages/coverage/7.11.2/coverage-7.11.2-cp311-cp311-macosx_11_0_arm64.whl", hash = "sha256:397778cf6d50df59c890bd3ac10acb5bf413388ff6a013305134f1403d5db648" },
+    { url = "https://repo.teledev.io/repository/pypi-all/packages/coverage/7.11.2/coverage-7.11.2-cp311-cp311-manylinux1_i686.manylinux_2_28_i686.manylinux_2_5_i686.whl", hash = "sha256:c85f44ed4260221e46a4e9e8e8df4b359ab6c0a742c79e85d649779bcf77b534" },
+    { url = "https://repo.teledev.io/repository/pypi-all/packages/coverage/7.11.2/coverage-7.11.2-cp311-cp311-manylinux1_x86_64.manylinux_2_28_x86_64.manylinux_2_5_x86_64.whl", hash = "sha256:cbffd1d5c5bf4c576ca247bf77646cdad4dced82928337eeb0b85e2b3be4d64b" },
+    { url = "https://repo.teledev.io/repository/pypi-all/packages/coverage/7.11.2/coverage-7.11.2-cp311-cp311-manylinux2014_aarch64.manylinux_2_17_aarch64.manylinux_2_28_aarch64.whl", hash = "sha256:ea10a57568af7cf082a7a4d98a699f993652c2ffbdd5a6c9d63c9ca10b693b4d" },
+    { url = "https://repo.teledev.io/repository/pypi-all/packages/coverage/7.11.2/coverage-7.11.2-cp311-cp311-manylinux_2_31_riscv64.manylinux_2_39_riscv64.whl", hash = "sha256:c4b1bea4c707f4c09f682fe0e646a114dfd068f627880d4a208850d01f8164ad" },
+    { url = "https://repo.teledev.io/repository/pypi-all/packages/coverage/7.11.2/coverage-7.11.2-cp311-cp311-musllinux_1_2_aarch64.whl", hash = "sha256:1ac3f647ecf25d883051ef42d38d823016e715b9f289f8c1768be5117075d1bd" },
+    { url = "https://repo.teledev.io/repository/pypi-all/packages/coverage/7.11.2/coverage-7.11.2-cp311-cp311-musllinux_1_2_i686.whl", hash = "sha256:d423991415f73a70c0a5f3e0a226cf4ab374dd0da7409978069b844df3d31582" },
+    { url = "https://repo.teledev.io/repository/pypi-all/packages/coverage/7.11.2/coverage-7.11.2-cp311-cp311-musllinux_1_2_riscv64.whl", hash = "sha256:0f4a958ff286038ac870f836351e9fb8912f1614d1cdbda200fc899235f7dc9b" },
+    { url = "https://repo.teledev.io/repository/pypi-all/packages/coverage/7.11.2/coverage-7.11.2-cp311-cp311-musllinux_1_2_x86_64.whl", hash = "sha256:4d1ff4b87ad438148976f2215141a490ae000e878536370d53f8da8c59a175a6" },
+    { url = "https://repo.teledev.io/repository/pypi-all/packages/coverage/7.11.2/coverage-7.11.2-cp311-cp311-win32.whl", hash = "sha256:e448ceee2fb880427eafc9a3f8e6162b2ac7cc3e9b30b85d6511f25cc8a11820" },
+    { url = "https://repo.teledev.io/repository/pypi-all/packages/coverage/7.11.2/coverage-7.11.2-cp311-cp311-win_amd64.whl", hash = "sha256:bc65e32fe5bb942f0f5247e1500e355cbbdf326181198f5e27e3bb3ddb81e203" },
+    { url = "https://repo.teledev.io/repository/pypi-all/packages/coverage/7.11.2/coverage-7.11.2-cp311-cp311-win_arm64.whl", hash = "sha256:e8eb6cbd7d3b238335b5da0f3ce281102435afb503be4d7bdd69eea3c700a952" },
+    { url = "https://repo.teledev.io/repository/pypi-all/packages/coverage/7.11.2/coverage-7.11.2-cp312-cp312-macosx_10_13_x86_64.whl", hash = "sha256:eaa2a5eeb82fa7a6a9cd65c4f968ee2a53839d451b4e88e060c67d87a0a40732" },
+    { url = "https://repo.teledev.io/repository/pypi-all/packages/coverage/7.11.2/coverage-7.11.2-cp312-cp312-macosx_11_0_arm64.whl", hash = "sha256:07e14a4050525fd98bf3d793f229eb8b3ae81678f4031e38e6a18a068bd59fd4" },
+    { url = "https://repo.teledev.io/repository/pypi-all/packages/coverage/7.11.2/coverage-7.11.2-cp312-cp312-manylinux1_i686.manylinux_2_28_i686.manylinux_2_5_i686.whl", hash = "sha256:03e7e7dc31a7deaebf121c3c3bd3c6442b7fbf50aca72aae2a1d08aa30ca2a20" },
+    { url = "https://repo.teledev.io/repository/pypi-all/packages/coverage/7.11.2/coverage-7.11.2-cp312-cp312-manylinux1_x86_64.manylinux_2_28_x86_64.manylinux_2_5_x86_64.whl", hash = "sha256:d752a8e398a19e2fb24781e4c73089bfeb417b6ac55f96c2c42cfe5bdb21cc18" },
+    { url = "https://repo.teledev.io/repository/pypi-all/packages/coverage/7.11.2/coverage-7.11.2-cp312-cp312-manylinux2014_aarch64.manylinux_2_17_aarch64.manylinux_2_28_aarch64.whl", hash = "sha256:5a02818ec44803e325d66bd022828212df934739b894d1699c9a05b9105d30f2" },
+    { url = "https://repo.teledev.io/repository/pypi-all/packages/coverage/7.11.2/coverage-7.11.2-cp312-cp312-manylinux_2_31_riscv64.manylinux_2_39_riscv64.whl", hash = "sha256:d30a717493583c2a83c99f195e934c073be7f4291b32b7352c246d52e43f6893" },
+    { url = "https://repo.teledev.io/repository/pypi-all/packages/coverage/7.11.2/coverage-7.11.2-cp312-cp312-musllinux_1_2_aarch64.whl", hash = "sha256:55ae008253df6000bc885a780c1b0e939bd8c932f41e16df1cfe19a00428a98a" },
+    { url = "https://repo.teledev.io/repository/pypi-all/packages/coverage/7.11.2/coverage-7.11.2-cp312-cp312-musllinux_1_2_i686.whl", hash = "sha256:17047fb65fcd1ce8a2f97dd2247c2b59cb4bc8848b3911db02dcb05856f91b71" },
+    { url = "https://repo.teledev.io/repository/pypi-all/packages/coverage/7.11.2/coverage-7.11.2-cp312-cp312-musllinux_1_2_riscv64.whl", hash = "sha256:5f72a49504e1f35443b157d97997c9259a017384373eab52fd09b8ade2ae4674" },
+    { url = "https://repo.teledev.io/repository/pypi-all/packages/coverage/7.11.2/coverage-7.11.2-cp312-cp312-musllinux_1_2_x86_64.whl", hash = "sha256:5c31cdbb95ab0f4a60224a04efc43cfb406ce904f0b60fb6b2a72f37718ea5cb" },
+    { url = "https://repo.teledev.io/repository/pypi-all/packages/coverage/7.11.2/coverage-7.11.2-cp312-cp312-win32.whl", hash = "sha256:632904d126ca97e5d4ecf7e51ae8b20f086b6f002c6075adcfd4ff3a28574527" },
+    { url = "https://repo.teledev.io/repository/pypi-all/packages/coverage/7.11.2/coverage-7.11.2-cp312-cp312-win_amd64.whl", hash = "sha256:c7ea5dec77d79dabb7b5fc712c59361aac52e459cd22028480625c3c743323d0" },
+    { url = "https://repo.teledev.io/repository/pypi-all/packages/coverage/7.11.2/coverage-7.11.2-cp312-cp312-win_arm64.whl", hash = "sha256:ed6ba9f1777fdd1c8e5650c7d123211fa484a187c61af4d82948dc5ee3c0afcc" },
+    { url = "https://repo.teledev.io/repository/pypi-all/packages/coverage/7.11.2/coverage-7.11.2-cp313-cp313-macosx_10_13_x86_64.whl", hash = "sha256:38a5509fe7fabb6fb3161059b947641753b6529150ef483fc01c4516a546f2ad" },
+    { url = "https://repo.teledev.io/repository/pypi-all/packages/coverage/7.11.2/coverage-7.11.2-cp313-cp313-macosx_11_0_arm64.whl", hash = "sha256:7e01ab8d69b6cffa2463e78a4d760a6b69dfebe5bf21837eabcc273655c7e7b3" },
+    { url = "https://repo.teledev.io/repository/pypi-all/packages/coverage/7.11.2/coverage-7.11.2-cp313-cp313-manylinux1_i686.manylinux_2_28_i686.manylinux_2_5_i686.whl", hash = "sha256:b4776c6555a9f378f37fa06408f2e1cc1d06e4c4e06adb3d157a4926b549efbe" },
+    { url = "https://repo.teledev.io/repository/pypi-all/packages/coverage/7.11.2/coverage-7.11.2-cp313-cp313-manylinux1_x86_64.manylinux_2_28_x86_64.manylinux_2_5_x86_64.whl", hash = "sha256:6f70fa1ef17cba5dada94e144ea1b6e117d4f174666842d1da3aaf765d6eb477" },
+    { url = "https://repo.teledev.io/repository/pypi-all/packages/coverage/7.11.2/coverage-7.11.2-cp313-cp313-manylinux2014_aarch64.manylinux_2_17_aarch64.manylinux_2_28_aarch64.whl", hash = "sha256:811bff1f93566a8556a9aeb078bd82573e37f4d802a185fba4cbe75468615050" },
+    { url = "https://repo.teledev.io/repository/pypi-all/packages/coverage/7.11.2/coverage-7.11.2-cp313-cp313-manylinux_2_31_riscv64.manylinux_2_39_riscv64.whl", hash = "sha256:d0e80c9946da61cc0bf55dfd90d65707acc1aa5bdcb551d4285ea8906255bb33" },
+    { url = "https://repo.teledev.io/repository/pypi-all/packages/coverage/7.11.2/coverage-7.11.2-cp313-cp313-musllinux_1_2_aarch64.whl", hash = "sha256:10f10c9acf584ef82bfaaa7296163bd11c7487237f1670e81fc2fa7e972be67b" },
+    { url = "https://repo.teledev.io/repository/pypi-all/packages/coverage/7.11.2/coverage-7.11.2-cp313-cp313-musllinux_1_2_i686.whl", hash = "sha256:fd3f7cc6cb999e3eff91a2998a70c662b0fcd3c123d875766147c530ca0d3248" },
+    { url = "https://repo.teledev.io/repository/pypi-all/packages/coverage/7.11.2/coverage-7.11.2-cp313-cp313-musllinux_1_2_riscv64.whl", hash = "sha256:e52a028a56889d3ad036c0420e866e4a69417d3203e2fc5f03dcb8841274b64c" },
+    { url = "https://repo.teledev.io/repository/pypi-all/packages/coverage/7.11.2/coverage-7.11.2-cp313-cp313-musllinux_1_2_x86_64.whl", hash = "sha256:f6f985e175dfa1fb8c0a01f47186720ae25d5e20c181cc5f3b9eba95589b8148" },
+    { url = "https://repo.teledev.io/repository/pypi-all/packages/coverage/7.11.2/coverage-7.11.2-cp313-cp313-win32.whl", hash = "sha256:e48b95abe2983be98cdf52900e07127eb7fe7067c87a700851f4f1f53d2b00e6" },
+    { url = "https://repo.teledev.io/repository/pypi-all/packages/coverage/7.11.2/coverage-7.11.2-cp313-cp313-win_amd64.whl", hash = "sha256:ea910cc737ee8553c81ad5c104bc5b135106ebb36f88be506c3493e001b4c733" },
+    { url = "https://repo.teledev.io/repository/pypi-all/packages/coverage/7.11.2/coverage-7.11.2-cp313-cp313-win_arm64.whl", hash = "sha256:ef2d3081562cd83f97984a96e02e7a294efa28f58d5e7f4e28920f59fd752b41" },
+    { url = "https://repo.teledev.io/repository/pypi-all/packages/coverage/7.11.2/coverage-7.11.2-cp313-cp313t-macosx_10_13_x86_64.whl", hash = "sha256:87d7c7b0b2279e174f36d276e2afb7bf16c9ea04e824d4fa277eea1854f4cfd4" },
+    { url = "https://repo.teledev.io/repository/pypi-all/packages/coverage/7.11.2/coverage-7.11.2-cp313-cp313t-macosx_11_0_arm64.whl", hash = "sha256:940d195f4c8ba3ec6e7c302c9f546cdbe63e57289ed535452bc52089b1634f1c" },
+    { url = "https://repo.teledev.io/repository/pypi-all/packages/coverage/7.11.2/coverage-7.11.2-cp313-cp313t-manylinux1_i686.manylinux_2_28_i686.manylinux_2_5_i686.whl", hash = "sha256:e3b92e10ca996b5421232dd6629b9933f97eb57ce374bca800ab56681fbeda2b" },
+    { url = "https://repo.teledev.io/repository/pypi-all/packages/coverage/7.11.2/coverage-7.11.2-cp313-cp313t-manylinux1_x86_64.manylinux_2_28_x86_64.manylinux_2_5_x86_64.whl", hash = "sha256:61d6a7cc1e7a7a761ac59dcc88cee54219fd4231face52bd1257cfd3df29ae9f" },
+    { url = "https://repo.teledev.io/repository/pypi-all/packages/coverage/7.11.2/coverage-7.11.2-cp313-cp313t-manylinux2014_aarch64.manylinux_2_17_aarch64.manylinux_2_28_aarch64.whl", hash = "sha256:bee1911c44c52cad6b51d436aa8c6ff5ca5d414fa089c7444592df9e7b890be9" },
+    { url = "https://repo.teledev.io/repository/pypi-all/packages/coverage/7.11.2/coverage-7.11.2-cp313-cp313t-manylinux_2_31_riscv64.manylinux_2_39_riscv64.whl", hash = "sha256:4c4423ea9c28749080b41e18ec74d658e6c9f148a6b47e719f3d7f56197f8227" },
+    { url = "https://repo.teledev.io/repository/pypi-all/packages/coverage/7.11.2/coverage-7.11.2-cp313-cp313t-musllinux_1_2_aarch64.whl", hash = "sha256:689d3b4dd0d4c912ed8bfd7a1b5ff2c5ecb1fa16571840573174704ff5437862" },
+    { url = "https://repo.teledev.io/repository/pypi-all/packages/coverage/7.11.2/coverage-7.11.2-cp313-cp313t-musllinux_1_2_i686.whl", hash = "sha256:75ef769be19d69ea71b0417d7fbf090032c444792579cdf9b166346a340987d5" },
+    { url = "https://repo.teledev.io/repository/pypi-all/packages/coverage/7.11.2/coverage-7.11.2-cp313-cp313t-musllinux_1_2_riscv64.whl", hash = "sha256:6681164bc697b93676945c8c814b76ac72204c395e11b71ba796a93b33331c24" },
+    { url = "https://repo.teledev.io/repository/pypi-all/packages/coverage/7.11.2/coverage-7.11.2-cp313-cp313t-musllinux_1_2_x86_64.whl", hash = "sha256:4aa799c61869318d2b86c0d3c413d6805546aec42069f009cbb27df2eefb2790" },
+    { url = "https://repo.teledev.io/repository/pypi-all/packages/coverage/7.11.2/coverage-7.11.2-cp313-cp313t-win32.whl", hash = "sha256:9a6468e1a3a40d3d1f9120a9ff221d3eacef4540a6f819fff58868fe0bd44fa9" },
+    { url = "https://repo.teledev.io/repository/pypi-all/packages/coverage/7.11.2/coverage-7.11.2-cp313-cp313t-win_amd64.whl", hash = "sha256:30c437e8b51ce081fe3903c9e368e85c9a803b093fd062c49215f3bf4fd1df37" },
+    { url = "https://repo.teledev.io/repository/pypi-all/packages/coverage/7.11.2/coverage-7.11.2-cp313-cp313t-win_arm64.whl", hash = "sha256:a35701fe0b5ee9d4b67d31aa76555237af32a36b0cf8dd33f8a74470cf7cd2f5" },
+    { url = "https://repo.teledev.io/repository/pypi-all/packages/coverage/7.11.2/coverage-7.11.2-cp314-cp314-macosx_10_15_x86_64.whl", hash = "sha256:7f933bc1fead57373922e383d803e1dd5ec7b5a786c220161152ebee1aa3f006" },
+    { url = "https://repo.teledev.io/repository/pypi-all/packages/coverage/7.11.2/coverage-7.11.2-cp314-cp314-macosx_11_0_arm64.whl", hash = "sha256:f80cb5b328e870bf3df0568b41643a85ee4b8ccd219a096812389e39aa310ea4" },
+    { url = "https://repo.teledev.io/repository/pypi-all/packages/coverage/7.11.2/coverage-7.11.2-cp314-cp314-manylinux1_i686.manylinux_2_28_i686.manylinux_2_5_i686.whl", hash = "sha256:f6b2498f86f2554ed6cb8df64201ee95b8c70fb77064a8b2ae8a7185e7a4a5f0" },
+    { url = "https://repo.teledev.io/repository/pypi-all/packages/coverage/7.11.2/coverage-7.11.2-cp314-cp314-manylinux1_x86_64.manylinux_2_28_x86_64.manylinux_2_5_x86_64.whl", hash = "sha256:a913b21f716aa05b149a8656e9e234d9da04bc1f9842136ad25a53172fecc20e" },
+    { url = "https://repo.teledev.io/repository/pypi-all/packages/coverage/7.11.2/coverage-7.11.2-cp314-cp314-manylinux2014_aarch64.manylinux_2_17_aarch64.manylinux_2_28_aarch64.whl", hash = "sha256:c5769159986eb174f0f66d049a52da03f2d976ac1355679371f1269e83528599" },
+    { url = "https://repo.teledev.io/repository/pypi-all/packages/coverage/7.11.2/coverage-7.11.2-cp314-cp314-manylinux_2_31_riscv64.manylinux_2_39_riscv64.whl", hash = "sha256:89565d7c9340858424a5ca3223bfefe449aeb116942cdc98cd76c07ca50e9db8" },
+    { url = "https://repo.teledev.io/repository/pypi-all/packages/coverage/7.11.2/coverage-7.11.2-cp314-cp314-musllinux_1_2_aarch64.whl", hash = "sha256:b7fc943097fa48de00d14d2a2f3bcebfede024e031d7cd96063fe135f8cbe96e" },
+    { url = "https://repo.teledev.io/repository/pypi-all/packages/coverage/7.11.2/coverage-7.11.2-cp314-cp314-musllinux_1_2_i686.whl", hash = "sha256:72a3d109ac233666064d60b29ae5801dd28bc51d1990e69f183a2b91b92d4baf" },
+    { url = "https://repo.teledev.io/repository/pypi-all/packages/coverage/7.11.2/coverage-7.11.2-cp314-cp314-musllinux_1_2_riscv64.whl", hash = "sha256:4648c90cf741fb61e142826db1557a44079de0ca868c5c5a363c53d852897e84" },
+    { url = "https://repo.teledev.io/repository/pypi-all/packages/coverage/7.11.2/coverage-7.11.2-cp314-cp314-musllinux_1_2_x86_64.whl", hash = "sha256:7f1aa017b47e1879d7bac50161b00d2b886f2ff3882fa09427119e1b3572ede1" },
+    { url = "https://repo.teledev.io/repository/pypi-all/packages/coverage/7.11.2/coverage-7.11.2-cp314-cp314-win32.whl", hash = "sha256:44b6e04bb94e59927a2807cd4de86386ce34248eaea95d9f1049a72f81828c38" },
+    { url = "https://repo.teledev.io/repository/pypi-all/packages/coverage/7.11.2/coverage-7.11.2-cp314-cp314-win_amd64.whl", hash = "sha256:7ea36e981a8a591acdaa920704f8dc798f9fff356c97dbd5d5702046ae967ce1" },
+    { url = "https://repo.teledev.io/repository/pypi-all/packages/coverage/7.11.2/coverage-7.11.2-cp314-cp314-win_arm64.whl", hash = "sha256:4aaf2212302b6f748dde596424b0f08bc3e1285192104e2480f43d56b6824f35" },
+    { url = "https://repo.teledev.io/repository/pypi-all/packages/coverage/7.11.2/coverage-7.11.2-cp314-cp314t-macosx_10_15_x86_64.whl", hash = "sha256:84e8e0f5ab5134a2d32d4ebadc18b433dbbeddd0b73481f816333b1edd3ff1c8" },
+    { url = "https://repo.teledev.io/repository/pypi-all/packages/coverage/7.11.2/coverage-7.11.2-cp314-cp314t-macosx_11_0_arm64.whl", hash = "sha256:5db683000ff6217273071c752bd6a1d341b6dc5d6aaa56678c53577a4e70e78a" },
+    { url = "https://repo.teledev.io/repository/pypi-all/packages/coverage/7.11.2/coverage-7.11.2-cp314-cp314t-manylinux1_i686.manylinux_2_28_i686.manylinux_2_5_i686.whl", hash = "sha256:2970c03fefee2a5f1aebc91201a0706a7d0061cc71ab452bb5c5345b7174a349" },
+    { url = "https://repo.teledev.io/repository/pypi-all/packages/coverage/7.11.2/coverage-7.11.2-cp314-cp314t-manylinux1_x86_64.manylinux_2_28_x86_64.manylinux_2_5_x86_64.whl", hash = "sha256:b9f28b900d96d83e2ae855b68d5cf5a704fa0b5e618999133fd2fb3bbe35ecb1" },
+    { url = "https://repo.teledev.io/repository/pypi-all/packages/coverage/7.11.2/coverage-7.11.2-cp314-cp314t-manylinux2014_aarch64.manylinux_2_17_aarch64.manylinux_2_28_aarch64.whl", hash = "sha256:c8b9a7ebc6a29202fb095877fd8362aab09882894d1c950060c76d61fb116114" },
+    { url = "https://repo.teledev.io/repository/pypi-all/packages/coverage/7.11.2/coverage-7.11.2-cp314-cp314t-manylinux_2_31_riscv64.manylinux_2_39_riscv64.whl", hash = "sha256:4f8f6bcaa7fe162460abb38f7a5dbfd7f47cfc51e2a0bf0d3ef9e51427298391" },
+    { url = "https://repo.teledev.io/repository/pypi-all/packages/coverage/7.11.2/coverage-7.11.2-cp314-cp314t-musllinux_1_2_aarch64.whl", hash = "sha256:461577af3f8ad4da244a55af66c0731b68540ce571dbdc02598b5ec9e7a09e73" },
+    { url = "https://repo.teledev.io/repository/pypi-all/packages/coverage/7.11.2/coverage-7.11.2-cp314-cp314t-musllinux_1_2_i686.whl", hash = "sha256:5b284931d57389ec97a63fb1edf91c68ec369cee44bc40b37b5c3985ba0a2914" },
+    { url = "https://repo.teledev.io/repository/pypi-all/packages/coverage/7.11.2/coverage-7.11.2-cp314-cp314t-musllinux_1_2_riscv64.whl", hash = "sha256:2ca963994d28e44285dc104cf94b25d8a7fd0c6f87cf944f46a23f473910703f" },
+    { url = "https://repo.teledev.io/repository/pypi-all/packages/coverage/7.11.2/coverage-7.11.2-cp314-cp314t-musllinux_1_2_x86_64.whl", hash = "sha256:e7d3fccd5781c5d29ca0bd1ea272630f05cd40a71d419e7e6105c0991400eb14" },
+    { url = "https://repo.teledev.io/repository/pypi-all/packages/coverage/7.11.2/coverage-7.11.2-cp314-cp314t-win32.whl", hash = "sha256:f633da28958f57b846e955d28661b2b323d8ae84668756e1eea64045414dbe34" },
+    { url = "https://repo.teledev.io/repository/pypi-all/packages/coverage/7.11.2/coverage-7.11.2-cp314-cp314t-win_amd64.whl", hash = "sha256:410cafc1aba1f7eb8c09823d5da381be30a2c9b3595758a4c176fcfc04732731" },
+    { url = "https://repo.teledev.io/repository/pypi-all/packages/coverage/7.11.2/coverage-7.11.2-cp314-cp314t-win_arm64.whl", hash = "sha256:595c6bb2b565cc2d930ee634cae47fa959dfd24cc0e8ae4cf2b6e7e131e0d1f7" },
+    { url = "https://repo.teledev.io/repository/pypi-all/packages/coverage/7.11.2/coverage-7.11.2-py3-none-any.whl", hash = "sha256:2442afabe9e83b881be083238bb7cf5afd4a10e47f29b6094470338d2336b33c" },
+]
+
+[package.optional-dependencies]
+toml = [
+    { name = "tomli", marker = "python_full_version <= '3.11'" },
+]
+
+[[package]]
 name = "defusedxml"
 version = "0.7.1"
 source = { registry = "https://repo.teledev.io/repository/pypi-all/simple" }
@@ -85,12 +198,33 @@ wheels = [
 ]
 
 [[package]]
+name = "exceptiongroup"
+version = "1.3.0"
+source = { registry = "https://repo.teledev.io/repository/pypi-all/simple" }
+dependencies = [
+    { name = "typing-extensions", marker = "python_full_version < '3.13'" },
+]
+sdist = { url = "https://repo.teledev.io/repository/pypi-all/packages/exceptiongroup/1.3.0/exceptiongroup-1.3.0.tar.gz", hash = "sha256:b241f5885f560bc56a59ee63ca4c6a8bfa46ae4ad651af316d4e81817bb9fd88" }
+wheels = [
+    { url = "https://repo.teledev.io/repository/pypi-all/packages/exceptiongroup/1.3.0/exceptiongroup-1.3.0-py3-none-any.whl", hash = "sha256:4d111e6e0c13d0644cad6ddaa7ed0261a0b36971f6d23e7ec9b4b9097da78a10" },
+]
+
+[[package]]
 name = "idna"
 version = "3.10"
 source = { registry = "https://repo.teledev.io/repository/pypi-all/simple" }
 sdist = { url = "https://repo.teledev.io/repository/pypi-all/packages/idna/3.10/idna-3.10.tar.gz", hash = "sha256:12f65c9b470abda6dc35cf8e63cc574b1c52b11df2c86030af0ac09b01b13ea9" }
 wheels = [
     { url = "https://repo.teledev.io/repository/pypi-all/packages/idna/3.10/idna-3.10-py3-none-any.whl", hash = "sha256:946d195a0d259cbba61165e88e65941f16e9b36ea6ddb97f00452bae8b1287d3" },
+]
+
+[[package]]
+name = "iniconfig"
+version = "2.3.0"
+source = { registry = "https://repo.teledev.io/repository/pypi-all/simple" }
+sdist = { url = "https://repo.teledev.io/repository/pypi-all/packages/iniconfig/2.3.0/iniconfig-2.3.0.tar.gz", hash = "sha256:c76315c77db068650d49c5b56314774a7804df16fee4402c1f19d6d15d8c4730" }
+wheels = [
+    { url = "https://repo.teledev.io/repository/pypi-all/packages/iniconfig/2.3.0/iniconfig-2.3.0-py3-none-any.whl", hash = "sha256:f631c04d2c48c52b84d0d0549c99ff3859c98df65b3101406327ecc7d53fbf12" },
 ]
 
 [[package]]
@@ -120,12 +254,25 @@ dependencies = [
     { name = "smartsheet-python-sdk" },
 ]
 
+[package.optional-dependencies]
+dev = [
+    { name = "pytest" },
+    { name = "pytest-cov" },
+    { name = "pytest-mock" },
+    { name = "ruff" },
+]
+
 [package.metadata]
 requires-dist = [
     { name = "jira", specifier = ">=3.6.0" },
+    { name = "pytest", marker = "extra == 'dev'", specifier = ">=8.0.0" },
+    { name = "pytest-cov", marker = "extra == 'dev'", specifier = ">=4.1.0" },
+    { name = "pytest-mock", marker = "extra == 'dev'", specifier = ">=3.12.0" },
     { name = "python-dotenv", specifier = ">=1.0.1" },
+    { name = "ruff", marker = "extra == 'dev'", specifier = ">=0.2.0" },
     { name = "smartsheet-python-sdk", specifier = ">=3.0.2" },
 ]
+provides-extras = ["dev"]
 
 [[package]]
 name = "oauthlib"
@@ -143,6 +290,68 @@ source = { registry = "https://repo.teledev.io/repository/pypi-all/simple" }
 sdist = { url = "https://repo.teledev.io/repository/pypi-all/packages/packaging/25.0/packaging-25.0.tar.gz", hash = "sha256:d443872c98d677bf60f6a1f2f8c1cb748e8fe762d2bf9d3148b5599295b0fc4f" }
 wheels = [
     { url = "https://repo.teledev.io/repository/pypi-all/packages/packaging/25.0/packaging-25.0-py3-none-any.whl", hash = "sha256:29572ef2b1f17581046b3a2227d5c611fb25ec70ca1ba8554b24b0e69331a484" },
+]
+
+[[package]]
+name = "pluggy"
+version = "1.6.0"
+source = { registry = "https://repo.teledev.io/repository/pypi-all/simple" }
+sdist = { url = "https://repo.teledev.io/repository/pypi-all/packages/pluggy/1.6.0/pluggy-1.6.0.tar.gz", hash = "sha256:7dcc130b76258d33b90f61b658791dede3486c3e6bfb003ee5c9bfb396dd22f3" }
+wheels = [
+    { url = "https://repo.teledev.io/repository/pypi-all/packages/pluggy/1.6.0/pluggy-1.6.0-py3-none-any.whl", hash = "sha256:e920276dd6813095e9377c0bc5566d94c932c33b27a3e3945d8389c374dd4746" },
+]
+
+[[package]]
+name = "pygments"
+version = "2.19.2"
+source = { registry = "https://repo.teledev.io/repository/pypi-all/simple" }
+sdist = { url = "https://repo.teledev.io/repository/pypi-all/packages/pygments/2.19.2/pygments-2.19.2.tar.gz", hash = "sha256:636cb2477cec7f8952536970bc533bc43743542f70392ae026374600add5b887" }
+wheels = [
+    { url = "https://repo.teledev.io/repository/pypi-all/packages/pygments/2.19.2/pygments-2.19.2-py3-none-any.whl", hash = "sha256:86540386c03d588bb81d44bc3928634ff26449851e99741617ecb9037ee5ec0b" },
+]
+
+[[package]]
+name = "pytest"
+version = "9.0.0"
+source = { registry = "https://repo.teledev.io/repository/pypi-all/simple" }
+dependencies = [
+    { name = "colorama", marker = "sys_platform == 'win32'" },
+    { name = "exceptiongroup", marker = "python_full_version < '3.11'" },
+    { name = "iniconfig" },
+    { name = "packaging" },
+    { name = "pluggy" },
+    { name = "pygments" },
+    { name = "tomli", marker = "python_full_version < '3.11'" },
+]
+sdist = { url = "https://repo.teledev.io/repository/pypi-all/packages/pytest/9.0.0/pytest-9.0.0.tar.gz", hash = "sha256:8f44522eafe4137b0f35c9ce3072931a788a21ee40a2ed279e817d3cc16ed21e" }
+wheels = [
+    { url = "https://repo.teledev.io/repository/pypi-all/packages/pytest/9.0.0/pytest-9.0.0-py3-none-any.whl", hash = "sha256:e5ccdf10b0bac554970ee88fc1a4ad0ee5d221f8ef22321f9b7e4584e19d7f96" },
+]
+
+[[package]]
+name = "pytest-cov"
+version = "7.0.0"
+source = { registry = "https://repo.teledev.io/repository/pypi-all/simple" }
+dependencies = [
+    { name = "coverage", extra = ["toml"] },
+    { name = "pluggy" },
+    { name = "pytest" },
+]
+sdist = { url = "https://repo.teledev.io/repository/pypi-all/packages/pytest-cov/7.0.0/pytest_cov-7.0.0.tar.gz", hash = "sha256:33c97eda2e049a0c5298e91f519302a1334c26ac65c1a483d6206fd458361af1" }
+wheels = [
+    { url = "https://repo.teledev.io/repository/pypi-all/packages/pytest-cov/7.0.0/pytest_cov-7.0.0-py3-none-any.whl", hash = "sha256:3b8e9558b16cc1479da72058bdecf8073661c7f57f7d3c5f22a1c23507f2d861" },
+]
+
+[[package]]
+name = "pytest-mock"
+version = "3.15.1"
+source = { registry = "https://repo.teledev.io/repository/pypi-all/simple" }
+dependencies = [
+    { name = "pytest" },
+]
+sdist = { url = "https://repo.teledev.io/repository/pypi-all/packages/pytest-mock/3.15.1/pytest_mock-3.15.1.tar.gz", hash = "sha256:1849a238f6f396da19762269de72cb1814ab44416fa73a8686deac10b0d87a0f" }
+wheels = [
+    { url = "https://repo.teledev.io/repository/pypi-all/packages/pytest-mock/3.15.1/pytest_mock-3.15.1-py3-none-any.whl", hash = "sha256:0a25e2eb88fe5168d535041d09a4529a188176ae608a6d249ee65abc0949630d" },
 ]
 
 [[package]]
@@ -207,6 +416,32 @@ wheels = [
 ]
 
 [[package]]
+name = "ruff"
+version = "0.14.4"
+source = { registry = "https://repo.teledev.io/repository/pypi-all/simple" }
+sdist = { url = "https://repo.teledev.io/repository/pypi-all/packages/ruff/0.14.4/ruff-0.14.4.tar.gz", hash = "sha256:f459a49fe1085a749f15414ca76f61595f1a2cc8778ed7c279b6ca2e1fd19df3" }
+wheels = [
+    { url = "https://repo.teledev.io/repository/pypi-all/packages/ruff/0.14.4/ruff-0.14.4-py3-none-linux_armv6l.whl", hash = "sha256:e6604613ffbcf2297cd5dcba0e0ac9bd0c11dc026442dfbb614504e87c349518" },
+    { url = "https://repo.teledev.io/repository/pypi-all/packages/ruff/0.14.4/ruff-0.14.4-py3-none-macosx_10_12_x86_64.whl", hash = "sha256:d99c0b52b6f0598acede45ee78288e5e9b4409d1ce7f661f0fa36d4cbeadf9a4" },
+    { url = "https://repo.teledev.io/repository/pypi-all/packages/ruff/0.14.4/ruff-0.14.4-py3-none-macosx_11_0_arm64.whl", hash = "sha256:9358d490ec030f1b51d048a7fd6ead418ed0826daf6149e95e30aa67c168af33" },
+    { url = "https://repo.teledev.io/repository/pypi-all/packages/ruff/0.14.4/ruff-0.14.4-py3-none-manylinux_2_17_aarch64.manylinux2014_aarch64.whl", hash = "sha256:81b40d27924f1f02dfa827b9c0712a13c0e4b108421665322218fc38caf615c2" },
+    { url = "https://repo.teledev.io/repository/pypi-all/packages/ruff/0.14.4/ruff-0.14.4-py3-none-manylinux_2_17_armv7l.manylinux2014_armv7l.whl", hash = "sha256:f5e649052a294fe00818650712083cddc6cc02744afaf37202c65df9ea52efa5" },
+    { url = "https://repo.teledev.io/repository/pypi-all/packages/ruff/0.14.4/ruff-0.14.4-py3-none-manylinux_2_17_i686.manylinux2014_i686.whl", hash = "sha256:aa082a8f878deeba955531f975881828fd6afd90dfa757c2b0808aadb437136e" },
+    { url = "https://repo.teledev.io/repository/pypi-all/packages/ruff/0.14.4/ruff-0.14.4-py3-none-manylinux_2_17_ppc64.manylinux2014_ppc64.whl", hash = "sha256:1043c6811c2419e39011890f14d0a30470f19d47d197c4858b2787dfa698f6c8" },
+    { url = "https://repo.teledev.io/repository/pypi-all/packages/ruff/0.14.4/ruff-0.14.4-py3-none-manylinux_2_17_ppc64le.manylinux2014_ppc64le.whl", hash = "sha256:a9f3a936ac27fb7c2a93e4f4b943a662775879ac579a433291a6f69428722649" },
+    { url = "https://repo.teledev.io/repository/pypi-all/packages/ruff/0.14.4/ruff-0.14.4-py3-none-manylinux_2_17_s390x.manylinux2014_s390x.whl", hash = "sha256:95643ffd209ce78bc113266b88fba3d39e0461f0cbc8b55fb92505030fb4a850" },
+    { url = "https://repo.teledev.io/repository/pypi-all/packages/ruff/0.14.4/ruff-0.14.4-py3-none-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:456daa2fa1021bc86ca857f43fe29d5d8b3f0e55e9f90c58c317c1dcc2afc7b5" },
+    { url = "https://repo.teledev.io/repository/pypi-all/packages/ruff/0.14.4/ruff-0.14.4-py3-none-manylinux_2_31_riscv64.whl", hash = "sha256:f911bba769e4a9f51af6e70037bb72b70b45a16db5ce73e1f72aefe6f6d62132" },
+    { url = "https://repo.teledev.io/repository/pypi-all/packages/ruff/0.14.4/ruff-0.14.4-py3-none-musllinux_1_2_aarch64.whl", hash = "sha256:76158a7369b3979fa878612c623a7e5430c18b2fd1c73b214945c2d06337db67" },
+    { url = "https://repo.teledev.io/repository/pypi-all/packages/ruff/0.14.4/ruff-0.14.4-py3-none-musllinux_1_2_armv7l.whl", hash = "sha256:f3b8f3b442d2b14c246e7aeca2e75915159e06a3540e2f4bed9f50d062d24469" },
+    { url = "https://repo.teledev.io/repository/pypi-all/packages/ruff/0.14.4/ruff-0.14.4-py3-none-musllinux_1_2_i686.whl", hash = "sha256:c62da9a06779deecf4d17ed04939ae8b31b517643b26370c3be1d26f3ef7dbde" },
+    { url = "https://repo.teledev.io/repository/pypi-all/packages/ruff/0.14.4/ruff-0.14.4-py3-none-musllinux_1_2_x86_64.whl", hash = "sha256:5a443a83a1506c684e98acb8cb55abaf3ef725078be40237463dae4463366349" },
+    { url = "https://repo.teledev.io/repository/pypi-all/packages/ruff/0.14.4/ruff-0.14.4-py3-none-win32.whl", hash = "sha256:643b69cb63cd996f1fc7229da726d07ac307eae442dd8974dbc7cf22c1e18fff" },
+    { url = "https://repo.teledev.io/repository/pypi-all/packages/ruff/0.14.4/ruff-0.14.4-py3-none-win_amd64.whl", hash = "sha256:26673da283b96fe35fa0c939bf8411abec47111644aa9f7cfbd3c573fb125d2c" },
+    { url = "https://repo.teledev.io/repository/pypi-all/packages/ruff/0.14.4/ruff-0.14.4-py3-none-win_arm64.whl", hash = "sha256:dd09c292479596b0e6fec8cd95c65c3a6dc68e9ad17b8f2382130f87ff6a75bb" },
+]
+
+[[package]]
 name = "six"
 version = "1.17.0"
 source = { registry = "https://repo.teledev.io/repository/pypi-all/simple" }
@@ -229,6 +464,55 @@ dependencies = [
 sdist = { url = "https://repo.teledev.io/repository/pypi-all/packages/smartsheet-python-sdk/3.1.0/smartsheet-python-sdk-3.1.0.tar.gz", hash = "sha256:1877e7f0b1726509079d330a3d3f1a3296c77ccceaf6ba0ee7b895aeb5a9a693" }
 wheels = [
     { url = "https://repo.teledev.io/repository/pypi-all/packages/smartsheet-python-sdk/3.1.0/smartsheet_python_sdk-3.1.0-py2.py3-none-any.whl", hash = "sha256:e42edcc6e29acf5985245910c46b1c2adf06d84f18e91db0dcdcbe7b97dd1111" },
+]
+
+[[package]]
+name = "tomli"
+version = "2.3.0"
+source = { registry = "https://repo.teledev.io/repository/pypi-all/simple" }
+sdist = { url = "https://repo.teledev.io/repository/pypi-all/packages/tomli/2.3.0/tomli-2.3.0.tar.gz", hash = "sha256:64be704a875d2a59753d80ee8a533c3fe183e3f06807ff7dc2232938ccb01549" }
+wheels = [
+    { url = "https://repo.teledev.io/repository/pypi-all/packages/tomli/2.3.0/tomli-2.3.0-cp311-cp311-macosx_10_9_x86_64.whl", hash = "sha256:88bd15eb972f3664f5ed4b57c1634a97153b4bac4479dcb6a495f41921eb7f45" },
+    { url = "https://repo.teledev.io/repository/pypi-all/packages/tomli/2.3.0/tomli-2.3.0-cp311-cp311-macosx_11_0_arm64.whl", hash = "sha256:883b1c0d6398a6a9d29b508c331fa56adbcdff647f6ace4dfca0f50e90dfd0ba" },
+    { url = "https://repo.teledev.io/repository/pypi-all/packages/tomli/2.3.0/tomli-2.3.0-cp311-cp311-manylinux2014_aarch64.manylinux_2_17_aarch64.manylinux_2_28_aarch64.whl", hash = "sha256:d1381caf13ab9f300e30dd8feadb3de072aeb86f1d34a8569453ff32a7dea4bf" },
+    { url = "https://repo.teledev.io/repository/pypi-all/packages/tomli/2.3.0/tomli-2.3.0-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl", hash = "sha256:a0e285d2649b78c0d9027570d4da3425bdb49830a6156121360b3f8511ea3441" },
+    { url = "https://repo.teledev.io/repository/pypi-all/packages/tomli/2.3.0/tomli-2.3.0-cp311-cp311-musllinux_1_2_aarch64.whl", hash = "sha256:0a154a9ae14bfcf5d8917a59b51ffd5a3ac1fd149b71b47a3a104ca4edcfa845" },
+    { url = "https://repo.teledev.io/repository/pypi-all/packages/tomli/2.3.0/tomli-2.3.0-cp311-cp311-musllinux_1_2_x86_64.whl", hash = "sha256:74bf8464ff93e413514fefd2be591c3b0b23231a77f901db1eb30d6f712fc42c" },
+    { url = "https://repo.teledev.io/repository/pypi-all/packages/tomli/2.3.0/tomli-2.3.0-cp311-cp311-win32.whl", hash = "sha256:00b5f5d95bbfc7d12f91ad8c593a1659b6387b43f054104cda404be6bda62456" },
+    { url = "https://repo.teledev.io/repository/pypi-all/packages/tomli/2.3.0/tomli-2.3.0-cp311-cp311-win_amd64.whl", hash = "sha256:4dc4ce8483a5d429ab602f111a93a6ab1ed425eae3122032db7e9acf449451be" },
+    { url = "https://repo.teledev.io/repository/pypi-all/packages/tomli/2.3.0/tomli-2.3.0-cp312-cp312-macosx_10_13_x86_64.whl", hash = "sha256:d7d86942e56ded512a594786a5ba0a5e521d02529b3826e7761a05138341a2ac" },
+    { url = "https://repo.teledev.io/repository/pypi-all/packages/tomli/2.3.0/tomli-2.3.0-cp312-cp312-macosx_11_0_arm64.whl", hash = "sha256:73ee0b47d4dad1c5e996e3cd33b8a76a50167ae5f96a2607cbe8cc773506ab22" },
+    { url = "https://repo.teledev.io/repository/pypi-all/packages/tomli/2.3.0/tomli-2.3.0-cp312-cp312-manylinux2014_aarch64.manylinux_2_17_aarch64.manylinux_2_28_aarch64.whl", hash = "sha256:792262b94d5d0a466afb5bc63c7daa9d75520110971ee269152083270998316f" },
+    { url = "https://repo.teledev.io/repository/pypi-all/packages/tomli/2.3.0/tomli-2.3.0-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl", hash = "sha256:4f195fe57ecceac95a66a75ac24d9d5fbc98ef0962e09b2eddec5d39375aae52" },
+    { url = "https://repo.teledev.io/repository/pypi-all/packages/tomli/2.3.0/tomli-2.3.0-cp312-cp312-musllinux_1_2_aarch64.whl", hash = "sha256:e31d432427dcbf4d86958c184b9bfd1e96b5b71f8eb17e6d02531f434fd335b8" },
+    { url = "https://repo.teledev.io/repository/pypi-all/packages/tomli/2.3.0/tomli-2.3.0-cp312-cp312-musllinux_1_2_x86_64.whl", hash = "sha256:7b0882799624980785240ab732537fcfc372601015c00f7fc367c55308c186f6" },
+    { url = "https://repo.teledev.io/repository/pypi-all/packages/tomli/2.3.0/tomli-2.3.0-cp312-cp312-win32.whl", hash = "sha256:ff72b71b5d10d22ecb084d345fc26f42b5143c5533db5e2eaba7d2d335358876" },
+    { url = "https://repo.teledev.io/repository/pypi-all/packages/tomli/2.3.0/tomli-2.3.0-cp312-cp312-win_amd64.whl", hash = "sha256:1cb4ed918939151a03f33d4242ccd0aa5f11b3547d0cf30f7c74a408a5b99878" },
+    { url = "https://repo.teledev.io/repository/pypi-all/packages/tomli/2.3.0/tomli-2.3.0-cp313-cp313-macosx_10_13_x86_64.whl", hash = "sha256:5192f562738228945d7b13d4930baffda67b69425a7f0da96d360b0a3888136b" },
+    { url = "https://repo.teledev.io/repository/pypi-all/packages/tomli/2.3.0/tomli-2.3.0-cp313-cp313-macosx_11_0_arm64.whl", hash = "sha256:be71c93a63d738597996be9528f4abe628d1adf5e6eb11607bc8fe1a510b5dae" },
+    { url = "https://repo.teledev.io/repository/pypi-all/packages/tomli/2.3.0/tomli-2.3.0-cp313-cp313-manylinux2014_aarch64.manylinux_2_17_aarch64.manylinux_2_28_aarch64.whl", hash = "sha256:c4665508bcbac83a31ff8ab08f424b665200c0e1e645d2bd9ab3d3e557b6185b" },
+    { url = "https://repo.teledev.io/repository/pypi-all/packages/tomli/2.3.0/tomli-2.3.0-cp313-cp313-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl", hash = "sha256:4021923f97266babc6ccab9f5068642a0095faa0a51a246a6a02fccbb3514eaf" },
+    { url = "https://repo.teledev.io/repository/pypi-all/packages/tomli/2.3.0/tomli-2.3.0-cp313-cp313-musllinux_1_2_aarch64.whl", hash = "sha256:a4ea38c40145a357d513bffad0ed869f13c1773716cf71ccaa83b0fa0cc4e42f" },
+    { url = "https://repo.teledev.io/repository/pypi-all/packages/tomli/2.3.0/tomli-2.3.0-cp313-cp313-musllinux_1_2_x86_64.whl", hash = "sha256:ad805ea85eda330dbad64c7ea7a4556259665bdf9d2672f5dccc740eb9d3ca05" },
+    { url = "https://repo.teledev.io/repository/pypi-all/packages/tomli/2.3.0/tomli-2.3.0-cp313-cp313-win32.whl", hash = "sha256:97d5eec30149fd3294270e889b4234023f2c69747e555a27bd708828353ab606" },
+    { url = "https://repo.teledev.io/repository/pypi-all/packages/tomli/2.3.0/tomli-2.3.0-cp313-cp313-win_amd64.whl", hash = "sha256:0c95ca56fbe89e065c6ead5b593ee64b84a26fca063b5d71a1122bf26e533999" },
+    { url = "https://repo.teledev.io/repository/pypi-all/packages/tomli/2.3.0/tomli-2.3.0-cp314-cp314-macosx_10_13_x86_64.whl", hash = "sha256:cebc6fe843e0733ee827a282aca4999b596241195f43b4cc371d64fc6639da9e" },
+    { url = "https://repo.teledev.io/repository/pypi-all/packages/tomli/2.3.0/tomli-2.3.0-cp314-cp314-macosx_11_0_arm64.whl", hash = "sha256:4c2ef0244c75aba9355561272009d934953817c49f47d768070c3c94355c2aa3" },
+    { url = "https://repo.teledev.io/repository/pypi-all/packages/tomli/2.3.0/tomli-2.3.0-cp314-cp314-manylinux2014_aarch64.manylinux_2_17_aarch64.manylinux_2_28_aarch64.whl", hash = "sha256:c22a8bf253bacc0cf11f35ad9808b6cb75ada2631c2d97c971122583b129afbc" },
+    { url = "https://repo.teledev.io/repository/pypi-all/packages/tomli/2.3.0/tomli-2.3.0-cp314-cp314-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl", hash = "sha256:0eea8cc5c5e9f89c9b90c4896a8deefc74f518db5927d0e0e8d4a80953d774d0" },
+    { url = "https://repo.teledev.io/repository/pypi-all/packages/tomli/2.3.0/tomli-2.3.0-cp314-cp314-musllinux_1_2_aarch64.whl", hash = "sha256:b74a0e59ec5d15127acdabd75ea17726ac4c5178ae51b85bfe39c4f8a278e879" },
+    { url = "https://repo.teledev.io/repository/pypi-all/packages/tomli/2.3.0/tomli-2.3.0-cp314-cp314-musllinux_1_2_x86_64.whl", hash = "sha256:b5870b50c9db823c595983571d1296a6ff3e1b88f734a4c8f6fc6188397de005" },
+    { url = "https://repo.teledev.io/repository/pypi-all/packages/tomli/2.3.0/tomli-2.3.0-cp314-cp314-win32.whl", hash = "sha256:feb0dacc61170ed7ab602d3d972a58f14ee3ee60494292d384649a3dc38ef463" },
+    { url = "https://repo.teledev.io/repository/pypi-all/packages/tomli/2.3.0/tomli-2.3.0-cp314-cp314-win_amd64.whl", hash = "sha256:b273fcbd7fc64dc3600c098e39136522650c49bca95df2d11cf3b626422392c8" },
+    { url = "https://repo.teledev.io/repository/pypi-all/packages/tomli/2.3.0/tomli-2.3.0-cp314-cp314t-macosx_10_13_x86_64.whl", hash = "sha256:940d56ee0410fa17ee1f12b817b37a4d4e4dc4d27340863cc67236c74f582e77" },
+    { url = "https://repo.teledev.io/repository/pypi-all/packages/tomli/2.3.0/tomli-2.3.0-cp314-cp314t-macosx_11_0_arm64.whl", hash = "sha256:f85209946d1fe94416debbb88d00eb92ce9cd5266775424ff81bc959e001acaf" },
+    { url = "https://repo.teledev.io/repository/pypi-all/packages/tomli/2.3.0/tomli-2.3.0-cp314-cp314t-manylinux2014_aarch64.manylinux_2_17_aarch64.manylinux_2_28_aarch64.whl", hash = "sha256:a56212bdcce682e56b0aaf79e869ba5d15a6163f88d5451cbde388d48b13f530" },
+    { url = "https://repo.teledev.io/repository/pypi-all/packages/tomli/2.3.0/tomli-2.3.0-cp314-cp314t-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl", hash = "sha256:c5f3ffd1e098dfc032d4d3af5c0ac64f6d286d98bc148698356847b80fa4de1b" },
+    { url = "https://repo.teledev.io/repository/pypi-all/packages/tomli/2.3.0/tomli-2.3.0-cp314-cp314t-musllinux_1_2_aarch64.whl", hash = "sha256:5e01decd096b1530d97d5d85cb4dff4af2d8347bd35686654a004f8dea20fc67" },
+    { url = "https://repo.teledev.io/repository/pypi-all/packages/tomli/2.3.0/tomli-2.3.0-cp314-cp314t-musllinux_1_2_x86_64.whl", hash = "sha256:8a35dd0e643bb2610f156cca8db95d213a90015c11fee76c946aa62b7ae7e02f" },
+    { url = "https://repo.teledev.io/repository/pypi-all/packages/tomli/2.3.0/tomli-2.3.0-cp314-cp314t-win32.whl", hash = "sha256:a1f7f282fe248311650081faafa5f4732bdbfef5d45fe3f2e702fbc6f2d496e0" },
+    { url = "https://repo.teledev.io/repository/pypi-all/packages/tomli/2.3.0/tomli-2.3.0-cp314-cp314t-win_amd64.whl", hash = "sha256:70a251f8d4ba2d9ac2542eecf008b3c8a9fc5c3f9f02c56a9d7952612be2fdba" },
+    { url = "https://repo.teledev.io/repository/pypi-all/packages/tomli/2.3.0/tomli-2.3.0-py3-none-any.whl", hash = "sha256:e95b1af3c5b07d9e643909b5abbec77cd9f1217e6d0bca72b0234736b9fb1f1b" },
 ]
 
 [[package]]

@@ -10,7 +10,24 @@ optionally set a **Status** column, and push **Start/End** dates from Smartsheet
 - **Status column** (optional): sets **Not Started / In Progress / Complete** based on Jira category (or Epic children).
 - **Date sync** (optional): reads **Start/End** from Smartsheet and updates Jira date fields.
 
-## Install & Run with `uv`
+## Install & Run
+
+### Quick Start with Makefile
+
+```bash
+# Run tests (auto-installs dev dependencies)
+make test
+
+# Preview sync (dry-run mode)
+make dry-run
+
+# Run actual sync (will make changes)
+make run
+```
+
+**Note:** The `make test`, `make lint`, and `make test-coverage` commands automatically install dev dependencies, so you can jump right in!
+
+### Manual Commands with `uv`
 
 ```bash
 # 0) (optional) install uv
@@ -25,6 +42,19 @@ DRY_RUN=1 uv run jira-ss-sync --log-level INFO
 # 3) Real run
 uv run jira-ss-sync --log-level INFO
 ```
+
+### Makefile Commands
+
+Run `make help` to see all available commands:
+
+- `make install` - Install package and dependencies
+- `make install-dev` - Install with dev dependencies
+- `make test` - Run all tests
+- `make test-coverage` - Run tests with coverage report
+- `make run` - Run the sync (production mode)
+- `make dry-run` - Run in preview mode
+- `make lint` - Run code linter
+- `make clean` - Clean temporary files
 
 ## Environment
 
@@ -92,6 +122,41 @@ LOG_LEVEL=INFO
   - Maps to Jira fields `JIRA_START_FIELD` and `JIRA_END_FIELD` (supports `duedate` or customfield IDs or display names).
   - If `PROTECT_EXISTING_DATES=1`, blank Smartsheet cells do **not** clear Jira dates.
 - DRY RUN preview shows **Start/End Old/New/Final** alongside progress & status.
+
+## Development
+
+### Running Tests
+
+The project includes a comprehensive test suite with high coverage.
+
+```bash
+# Install development dependencies
+uv pip install -e ".[dev]"
+
+# Run all tests
+pytest
+
+# Run with coverage report
+pytest --cov=jira_ss_progress --cov-report=term-missing
+
+# Run specific test file
+pytest tests/test_config.py
+
+# Run tests in verbose mode
+pytest -v
+```
+
+See `tests/README.md` for detailed testing documentation.
+
+### Code Quality
+
+```bash
+# Run linter
+ruff check jira_ss_progress/
+
+# Auto-fix issues
+ruff check --fix jira_ss_progress/
+```
 
 ## Troubleshooting
 
